@@ -26,7 +26,8 @@ public class Artista {
 	//Método que devuelve String con atributos de Artista formateados
 	static public String formattedArtista(){
 		String artista =
-				"\nNombre:\t" + getNombre()
+				"Artista:" +
+				"\nNombre:\t" + getNombre() +"\n"
 				+ "Año de nacimiento:\t" + getAnoNacimiento();
 		
 		return artista;

@@ -16,7 +16,8 @@ public class Artistas {
 			System.out.println("No se han cargado artistas en la lista....");
 		}else {
 			for (int i = 0; i < artistas.size(); i++) {
-				if (artistas.get(i).getNombre().equalsIgnoreCase(nombre)) {
+				artistas.get(i);
+				if (Artista.getNombre().equalsIgnoreCase(nombre)) {
 					artista = artistas.get(i);
 				}
 			}
@@ -26,12 +27,13 @@ public class Artistas {
 	
 	//Método para buscar artista por año
 	public static ArrayList<Artista> buscarArtista(int ano){
-		ArrayList<Artista> artistasPorAno = null;
+		ArrayList<Artista> artistasPorAno = new ArrayList<Artista>();
 		if (artistas == null) {
 			System.out.println("No se han cargado artistas en la lista....");
 		}else {
 			for (int a = 0; a < artistas.size(); a++) {
-				if (artistas.get(a).getAnoNacimiento() == ano) {
+				artistas.get(a);
+				if (Artista.getAnoNacimiento() == ano) {
 					artistasPorAno.add(artistas.get(a));
 				}
 			}
@@ -40,7 +42,14 @@ public class Artistas {
 	}
 	
 	//Método para añadir artista a la lista
+	public static void anadirArtista(Artista artista){
+		artistas.add(artista);
+	}
 	
+	//Método para borrar artista
+	public static void borrarArtista(String nombre){
+		artistas.remove(buscarArtista(nombre));
+	}
 	
 	//Getters y setters
 	public static ArrayList<Artista> getArtistas() {

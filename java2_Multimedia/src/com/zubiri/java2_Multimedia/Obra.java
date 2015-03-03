@@ -21,17 +21,17 @@ public class Obra {
 	public Obra(Scanner sc){
 		System.out.println("\nIntroduce el título de la obra: ");
 		this.setTitulo(sc.next());
-		System.out.println("\nIntroduce el nombre del autor: ");
-		this.setAutor(Artistas.buscarArtista(sc.next()));
 		System.out.println("Ingresa el año de edición: ");
 		this.setAnoEdicion(sc.nextInt());
+		this.setAutor(new Artista(sc));
+		Multiteca.sumarObra();
 	}
 	
 	//Método que devuelve String con atributos de Obra formateado
 	public String formattedObra(){
 		String obra =
-		"\nTítulo:\t" + this.getTitulo()
-		+ "Año de edición:\t" + this.getAnoEdicion()
+		"\nTítulo:\t" + this.getTitulo() + "\n"
+		+ "\nAño de edición:\t" + this.getAnoEdicion() + "\n"
 		 + Artista.formattedArtista();
 		
 		return obra;
