@@ -16,6 +16,7 @@ public class Main {
 			System.out.println("Llenar multiteca--------------1");
 			System.out.println("Buscar obra-------------------2");
 			System.out.println("Mostrar multiteca-------------3");
+			System.out.println("Salir-------------------------0");
 			System.out.println("*******************************");
 			
 			opcion = sc.nextInt();
@@ -36,8 +37,12 @@ public class Main {
 				Multiteca.formattedMultiteca();
 				break;
 			default:
-				System.err.println("Eso no es una opción!!!");
+				if (opcion == 0) {
+					break;
+				}else{
+					System.err.println("Eso no es una opción!!!");
 				break;
+				}
 			}
 		}while(opcion != 0);
 	}
