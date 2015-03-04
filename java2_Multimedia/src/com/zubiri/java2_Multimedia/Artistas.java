@@ -25,8 +25,7 @@ public class Artistas {
 	public static String formattedArtistas(ArrayList<Artista> arrayArtistas){
 		String artistasFormateados = "";
 		for (int i = 0; i < arrayArtistas.size(); i++) {
-			arrayArtistas.get(i);
-			artistasFormateados += Artista.formattedArtista();
+			artistasFormateados += arrayArtistas.get(i).formattedArtista();
 		}
 		return artistasFormateados;	
 	}
@@ -38,8 +37,7 @@ public class Artistas {
 			System.out.println("No se han cargado artistas en la lista....");
 		}else {
 			for (int i = 0; i < artistas.size(); i++) {
-				artistas.get(i);
-				if (Artista.getNombre().equalsIgnoreCase(nombre)) {
+				if (artistas.get(i).getNombre().equalsIgnoreCase(nombre)) {
 					artista = artistas.get(i);
 				}
 			}
@@ -54,8 +52,7 @@ public class Artistas {
 			System.out.println("No se han cargado artistas en la lista....");
 		}else {
 			for (int a = 0; a < artistas.size(); a++) {
-				artistas.get(a);
-				if (Artista.getAnoNacimiento() == ano) {
+				if (artistas.get(a).getAnoNacimiento() == ano) {
 					artistasPorAno.add(artistas.get(a));
 				}
 			}

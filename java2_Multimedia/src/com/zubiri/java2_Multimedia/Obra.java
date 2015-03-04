@@ -30,9 +30,9 @@ public abstract class Obra {
 	public String formattedObra(){
 		String obra =
 		"\nTítulo:\t" + this.getTitulo() + "\n"
-		+ "\nAño de edición:\t" + this.getAnoEdicion() + "\n"
-		+ "\nAutor: "
-		+ Artista.formattedArtista();
+		+ "Año de edición:\t" + this.getAnoEdicion() + "\n"
+		+ "Autor: "
+		+ this.getAutor().formattedArtista() + "\n";
 		
 		return obra;
 	}

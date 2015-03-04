@@ -59,8 +59,7 @@ public final class Multiteca {
 	public Obra obtainObraAutor(String nombre){
 		Obra obra = null;
 		for (int l = 0; l < multiteca.size(); l++) {
-			multiteca.get(l).getAutor();
-			if (Artista.getNombre().equalsIgnoreCase(nombre)){
+			if (multiteca.get(l).getAutor().getNombre().equalsIgnoreCase(nombre)){
 				obra = multiteca.get(l);
 			}
 		}
