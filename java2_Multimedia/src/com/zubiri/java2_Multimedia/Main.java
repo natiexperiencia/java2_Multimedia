@@ -1,6 +1,5 @@
 package com.zubiri.java2_Multimedia;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -16,6 +15,8 @@ public class Main {
 			System.out.println("*******************************");
 			System.out.println("Llenar multiteca--------------1");
 			System.out.println("Buscar obra-------------------2");
+			System.out.println("Mostrar multiteca-------------3");
+			System.out.println("*******************************");
 			
 			opcion = sc.nextInt();
 			
@@ -29,15 +30,15 @@ public class Main {
 				}
 				break;
 			case 2:
-				System.out.println(Multiteca.formattedMultiteca());
+				Multiteca.buscarObraPatron(sc);
 				break;
 			case 3:
+				Multiteca.formattedMultiteca();
 				break;
 			default:
+				System.err.println("Eso no es una opción!!!");
 				break;
 			}
 		}while(opcion != 0);
-
 	}
-
 }

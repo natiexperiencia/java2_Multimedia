@@ -24,6 +24,16 @@ public class Libro extends Obra {
 		this.setNumPaginas(sc.nextInt());
 	}
 	
+	//String formateado de Libro
+	@Override
+	public String formattedObra(){
+		String libroFormateada =
+				super.formattedObra() +
+				"Editorial: \t" + this.getEditorial() +
+				"\nNúmero de páginas: \t" + this.getNumPaginas() + "\n";
+		return libroFormateada;
+	}
+	
 	//Getters y setters
 	public String getEditorial() {
 		return editorial;

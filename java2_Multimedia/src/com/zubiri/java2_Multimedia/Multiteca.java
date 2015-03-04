@@ -21,6 +21,7 @@ public final class Multiteca {
 	public static void addObra(Scanner sc){
 		int opcion;
 		System.out.println("¿Que tipo de obra quieres añadir?");
+		System.out.println("---------------------------------");
 		System.out.println("Pelicula------------------------1");
 		System.out.println("Libro---------------------------2");
 		System.out.println("Disco---------------------------3");
@@ -39,8 +40,37 @@ public final class Multiteca {
 		}
 	}
 	
+	//Método buscar por diferentes patrones
+	public static void buscarObraPatron(Scanner sc){
+		System.out.println("Por qué patrón quieres hacer la búsqueda?: ");
+		System.out.println("-------------------------------------------");
+		System.out.println("Título de la obra-------------------------1");
+		System.out.println("Autor de la obra--------------------------2");
+		int opcion = sc.nextInt();
+		switch (opcion) {
+		case 1:
+			Obra obra = null;
+			System.out.println("Escribe el título de la obra: ");
+			String titulo = sc.next();
+			obra = obtainObraTitulo(titulo);
+			System.out.println(obra.formattedObra());
+			break;
+		case 2:
+			ArrayList<Obra> obras = null;
+			System.out.println("Escribe el nombre del autor");
+			String autor = sc.next();
+			obras = obtainObraAutor(autor);
+			for (int e = 0; e < obras.size(); e++) {
+				System.out.println(obras.get(e).formattedObra());
+			}
+			System.out.println("---------FIN------------");
+		default:
+			break;
+		}
+	}
+	
 	//Método que busca por título y devuelve una obra del ArrayList multiteca 
-	public Obra obtainObraTitulo(String titulo){
+	public static Obra obtainObraTitulo(String titulo){
 		Obra obra = null;
 		for (int i = 0; i < multiteca.size(); i++) {
 			if (multiteca.get(i).getTitulo().equalsIgnoreCase(titulo)) {
@@ -56,14 +86,15 @@ public final class Multiteca {
 	}
 	
 	//Método que busca una obra por Autor y devuelve una obra
-	public Obra obtainObraAutor(String nombre){
-		Obra obra = null;
+	@SuppressWarnings("null")
+	public static ArrayList<Obra> obtainObraAutor(String nombre){
+		ArrayList<Obra> obras = null;
 		for (int l = 0; l < multiteca.size(); l++) {
 			if (multiteca.get(l).getAutor().getNombre().equalsIgnoreCase(nombre)){
-				obra = multiteca.get(l);
+				obras.add(multiteca.get(l));
 			}
 		}
-		return obra;
+		return obras;
 	}
 	
 	//Contador de obras

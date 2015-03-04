@@ -27,12 +27,12 @@ public class Pelicula extends Obra {
 	//Película formateada en un String
 	@Override
 	public String formattedObra(){
-		String obra =
+		String pelicula =
 				super.formattedObra() + 
 				"\nProductora: \t" + this.getProductora() +
 				"\nIntérpretes: " +
 				Artistas.formattedArtistas(this.getInterpretes());
-		return obra;
+		return pelicula;
 	}
 	
 	public String getProductora() {

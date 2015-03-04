@@ -24,6 +24,16 @@ public class Disco extends Obra {
 		this.setnCanciones(sc.nextInt());
 	}
 	
+	//String formateado de Disco
+	@Override
+	public String formattedObra(){
+		String discoFormateado =
+				super.formattedObra() + 
+				"Discografía: \t" + this.getDiscografia() +
+				"Número de canciones: \t" + this.getnCanciones();
+		return discoFormateado;
+	}
+	
 	//Getters y Setters
 	public String getDiscografia() {
 		return discografia;
