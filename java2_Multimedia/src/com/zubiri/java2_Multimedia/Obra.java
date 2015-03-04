@@ -21,6 +21,7 @@ public abstract class Obra {
 		this.setTitulo(sc.next());
 		System.out.println("Ingresa el año de edición: ");
 		this.setAnoEdicion(sc.nextInt());
+		System.out.println("Autor:");
 		this.setAutor(new Artista(sc));
 		Multiteca.sumarObra();
 	}
@@ -30,7 +31,8 @@ public abstract class Obra {
 		String obra =
 		"\nTítulo:\t" + this.getTitulo() + "\n"
 		+ "\nAño de edición:\t" + this.getAnoEdicion() + "\n"
-		 + Artista.formattedArtista();
+		+ "\nAutor: "
+		+ Artista.formattedArtista();
 		
 		return obra;
 	}

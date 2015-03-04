@@ -21,6 +21,16 @@ public class Artistas {
 		return artistas;
 	}
 	
+	//String de artistas formateado
+	public static String formattedArtistas(ArrayList<Artista> arrayArtistas){
+		String artistasFormateados = "";
+		for (int i = 0; i < arrayArtistas.size(); i++) {
+			arrayArtistas.get(i);
+			artistasFormateados += Artista.formattedArtista();
+		}
+		return artistasFormateados;	
+	}
+	
 	//Método para buscar artista por nombre
 	public static Artista buscarArtista(String nombre){
 		Artista artista = null;
@@ -38,7 +48,7 @@ public class Artistas {
 	}
 	
 	//Método para buscar artista por año
-	public static ArrayList<Artista> buscarArtista(int ano){
+	public static ArrayList<Artista> buscarArtistas(int ano){
 		ArrayList<Artista> artistasPorAno = new ArrayList<Artista>();
 		if (artistas == null) {
 			System.out.println("No se han cargado artistas en la lista....");

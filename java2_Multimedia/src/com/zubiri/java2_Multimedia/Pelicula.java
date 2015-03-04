@@ -24,6 +24,17 @@ public class Pelicula extends Obra {
 		this.setInterpretes(Artistas.crearArtistas(sc));
 	}
 	
+	//Película formateada en un String
+	@Override
+	public String formattedObra(){
+		String obra =
+				super.formattedObra() + 
+				"\nProductora: \t" + this.getProductora() +
+				"\nIntérpretes: " +
+				Artistas.formattedArtistas(this.getInterpretes());
+		return obra;
+	}
+	
 	public String getProductora() {
 		return productora;
 	}

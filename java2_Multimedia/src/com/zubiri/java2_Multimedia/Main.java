@@ -11,7 +11,7 @@ public class Main {
 			Scanner sc = new Scanner(System.in);
 			
 			System.out.println("*******************************");
-			System.out.println("*Menu:                         *");
+			System.out.println("*Menu:                        *");
 			System.out.println("*******************************");
 			System.out.println("Llenar multiteca--------------1");
 			System.out.println("Buscar obra-------------------2");

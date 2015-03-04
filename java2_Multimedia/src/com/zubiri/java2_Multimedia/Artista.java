@@ -18,7 +18,7 @@ public class Artista {
 	//Constructor 3
 	public Artista(Scanner sc){
 		System.out.println("Introduce el nombre del artista: ");
-		this.setNombre(sc.next());
+		setNombre(sc.next());
 		System.out.println("Introduce el año de nacimiento: ");
 		setAnoNacimiento(sc.nextInt());
 	}
@@ -26,9 +26,8 @@ public class Artista {
 	//Método que devuelve String con atributos de Artista formateados
 	static public String formattedArtista(){
 		String artista =
-				"Artista:" +
-				"\nNombre:\t" + getNombre() +"\n"
-				+ "Año de nacimiento:\t" + getAnoNacimiento();
+				"\nNombre:\t" + Artista.getNombre() +"\n"
+				+ "Año de nacimiento:\t" + Artista.getAnoNacimiento();
 		
 		return artista;
 	}
