@@ -1,6 +1,7 @@
 package com.zubiri.java2_Multimedia;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Artistas {
 	//Atributos
@@ -8,6 +9,17 @@ public class Artistas {
 	
 	//Costructor
 	public Artistas(){}
+	
+	//Crear artistas
+	public static ArrayList<Artista> crearArtistas(Scanner sc){
+		int opcion;
+		System.out.println("¿Cuantos artistas son?: ");
+		opcion = sc.nextInt();
+		for (int a = 0; a < opcion; a++) {
+			artistas.add(new Artista(sc));
+		}
+		return artistas;
+	}
 	
 	//Método para buscar artista por nombre
 	public static Artista buscarArtista(String nombre){

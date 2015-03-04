@@ -21,11 +21,7 @@ public class Pelicula extends Obra {
 		super(sc);
 		System.out.println("Introduce el nombre de la productora: ");
 		this.setProductora(sc.next());
-		System.out.println("¿Cuántos artistas interpretan la película?: ");
-		for (int i = 0; i < sc.nextInt(); i++) {
-			interpretes.add(new Artista(sc));
-		}
-		this.setInterpretes(interpretes);
+		this.setInterpretes(Artistas.crearArtistas(sc));
 	}
 	
 	public String getProductora() {

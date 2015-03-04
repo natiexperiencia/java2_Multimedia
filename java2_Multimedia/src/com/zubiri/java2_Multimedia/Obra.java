@@ -2,22 +2,20 @@ package com.zubiri.java2_Multimedia;
 
 import java.util.Scanner;
 
-public class Obra {
+public abstract class Obra {
 	
 	//Atributos
 	private String titulo;
 	private Artista autor;
 	private int anoEdicion;
 	
-	//Contructor 1
-	public Obra(){}
-	//Costructor 2
+	//Costructor
 	public Obra(String titulo, Artista autor, int anoEdicion){
 		this.titulo = titulo;
 		this.autor = autor;
 		this.anoEdicion = anoEdicion;
 	}
-	//Costructor 3
+	//Costructor 2
 	public Obra(Scanner sc){
 		System.out.println("\nIntroduce el título de la obra: ");
 		this.setTitulo(sc.next());
